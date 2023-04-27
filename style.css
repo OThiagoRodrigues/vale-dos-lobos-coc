@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=MedievalSharp&display=swap');
+
+@keyframes animacao {
+
+    0%   {background-color: #FDE2F3; box-shadow: 0px 20px 30px #FDE2F386,0px -20px 30px #FDE2F386, 20px 0px 30px #FDE2F386, -20px 0px 30px #FDE2F386;}
+    10%  {background-color: #E5BEEC; box-shadow: 0px 20px 30px #E5BEEC86,0px -20px 30px #E5BEEC86, 20px 0px 30px #E5BEEC86, -20px 0px 30px #E5BEEC86;}
+    20% {background-color: #917FB3; box-shadow: 0px 20px 30px #917FB386,0px -20px 30px #917FB386, 20px 0px 30px #917FB386, -20px 0px 30px #917FB386;}
+    30% {background-color: #8962d3; box-shadow: 0px 20px 30px #8962d386,0px -20px 30px #8962d386, 20px 0px 30px #8962d386, -20px 0px 30px #8962d386;}
+    40% {background-color: #6f31e4; box-shadow: 0px 20px 30px #6f31e486,0px -20px 30px #6f31e486, 20px 0px 30px #6f31e486, -20px 0px 30px #6f31e486;}
+    50% {background-color: #2A2F4F; box-shadow: 0px 20px 30px #2A2F4F86,0px -20px 30px #2A2F4F86, 20px 0px 30px #2A2F4F86, -20px 0px 30px #2A2F4F86;}
+    55% {background-color: #6f31e4; box-shadow: 0px 20px 30px #6f31e486,0px -20px 30px #6f31e486, 20px 0px 30px #6f31e486, -20px 0px 30px #6f31e486;}
+    60% {background-color: #8962d3; box-shadow: 0px 20px 30px #8962d386,0px -20px 30px #8962d386, 20px 0px 30px #8962d386, -20px 0px 30px #8962d386;}
+    70% {background-color: #917FB3; box-shadow: 0px 20px 30px #917FB386,0px -20px 30px #917FB386, 20px 0px 30px #917FB386, -20px 0px 30px #917FB386;}
+    80% {background-color: #E5BEEC; box-shadow: 0px 20px 30px #E5BEEC86,0px -20px 30px #E5BEEC86, 20px 0px 30px #E5BEEC86, -20px 0px 30px #E5BEEC86;}
+    90% {background-color: #FDE2F3; box-shadow: 0px 20px 30px #FDE2F386,0px -20px 30px #FDE2F386, 20px 0px 30px #FDE2F386, -20px 0px 30px #FDE2F386;}
+    100% {background-color: #FFFFFF; box-shadow: 0px 20px 30px #FFFFFF86,0px -20px 30px #FFFFFF86, 20px 0px 30px #FFFFFF86, -20px 0px 30px #FFFFFF86;}
+}
+
+@keyframes animaca-obotao {
+    0% {background-image: linear-gradient(to left, #2A2F4F, #2A2F4F, #da5f65)}
+    20% {background-image: linear-gradient(to left, #2A2F4F, #da5f65, #da5f65);}
+    40% {background-image: linear-gradient(to left, #2A2F4F, #da5f65, #da5f65, #da5f65)}
+    60% {background-image: linear-gradient(to left, #2A2F4F, #da5f65, #da5f65, #da5f65, #da5f65)}
+    80% {background-image: linear-gradient(to left, #2A2F4F, #da5f65, #da5f65, #da5f65, #da5f65, #da5f65)}
+    100% {background-image: linear-gradient(to left,#da5f65, #da5f65, #da5f65, #da5f65, #da5f65)}
+}
+
+@keyframes insert {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-family: monospace;
+    /*font-family: 'Almendra SC', serif;*/
+    color: #FDE2F3;
+    /*font-family: 'MedievalSharp', cursive;*/
+}
+
+body {
+    background-color: #000000;
+}
+
+.destaque {
+    font-size: 2rem;
+}
+
+.cabecalho {
+    background-color: #000000;
+    background-image: url(./img/Vale\ dos\ Lobos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background: linear-gradient(to right , #2A2F4F , #535c9b , #7280d6);*/
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap:25%;
+    padding: 40px 15%;
+    height: 400px;
+}
+
+.cabecalho__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cabecalho__container__titulo {
+    display: none;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+
+.lista {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: .3rem;
+}
+
+.lista a {
+    text-decoration: none;
+    color: #FDE2F3;
+    background-image: linear-gradient(to left, #2A2F4F, #2A2F4F, #da5f65);
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    border: solid 3px #2A2F4F;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-weight: 300;
+    gap: 8px;
+}
+
+.lista a:hover {  
+    /*background-image: linear-gradient(to left, #2A2F4F, #da5f65, #da5f65);*/   
+    animation-name: animaca-obotao;
+    animation-duration: .6s;
+    animation-iteration-count: infinite;
+    
+}
+
+.original {
+    font-family: monospace;
+    font-size: 2rem;
+    padding-left: 5px;
+    opacity: 1;
+    animation-name: insert;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.border-gradient {
+    
+    height: .2rem;
+    background-image: linear-gradient(to left, #2A2F4F, #2A2F4F, #da5f65);
+    /*background: linear-gradient(to left, #2A2F4F , #535c9b , #7280d6);*/
+    margin: 0 15%;
+    border-radius: 10px;
+}
+
+.menu-lateral { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(to bottom, #2A2F4F, #535c9b , #7280d6);
+    /*background-image: linear-gradient(to bottom, #2A2F4F , #2A2F4F, #535c9b , #7280d6);*/
+    border-radius: 10px;
+    color: #FDE2F3;
+    padding: 2rem;
+    gap: 1.5rem;
+    height: fit-content;
+}
+
+.selfie-borda{
+    padding: 5px;
+    background-color: #FDE2F3;
+    border-radius: 50%;
+    animation-name: animacao;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /*box-shadow: 0px 30px 30px #FDE2F3;*/
+    box-shadow: 0px 20px 30px #FDE2F386,0px -20px 30px #FDE2F386, 20px 0px 30px #FDE2F386, -20px 0px 30px #FDE2F386;
+}
+
+.selfie-padding{
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #2A2F4F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-clan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .7s;
+}
+
+.link-clan:hover {
+    filter: blur(2px);
+}
+
+.menu-lateral__selfie{
+    width: 100px;
+    border-radius: 50%;
+    /*border: solid 5px #E5BEEC;
+    padding: 5px;*/
+}
+
+.menu-lateral__container__lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-lateral__container__lista__titulo {
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.menu-lateral__container__lista__lista {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.tabela {
+    /*border: solid 3px black;*/
+    padding: .2rem;
+    
+}
+
+.tabela-cabecalho {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.tabela-celula {
+    padding: 5px;
+    font-size: .8rem;
+}
+
+.principal {
+    background-color: #000000;
+    /*background: linear-gradient(to bottom, #FDE2F3, #E5BEEC);*/
+    display: flex;
+    min-height: 100vh;
+    color: #ffa8ac;
+    padding: 1rem 15%;
+    gap: 1%;
+}
+
+.principal__titulo {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.container__imagem {
+    display: flex;
+    gap: 5%;
+}
+
+.imagem__pagina {
+    width: 30%;
+    opacity: 0.8;
+}
+
+.imagem__pagina-centro {
+    width: 100%;
+    margin: 3rem 0 2rem 0;
+    opacity: 0.8;
+}
+
+.principal__titulo-dois {
+    font-size: 1.5rem;
+    margin: 1rem 1rem 1rem 0;
+}
+
+.principal__texto {
+    /*background-color: #2A2F4F;*/
+    background: linear-gradient(to bottom, #2A2F4F, #535c9b , #7280d6);
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.principal__paragrafo{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.rodape {
+    background-color: #000000;
+    /*background-image: linear-gradient(to right, #2A2F4F , #535c9b , #7280d6);*/
+    color: #FDE2F3;
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.rodape__titulo{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.rodape__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rodape__container__divisao-um{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.rodape__container__divisao-dois{
+    width: 100%;
+}
